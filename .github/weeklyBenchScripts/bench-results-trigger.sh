@@ -14,7 +14,7 @@ ensure_git_installed() {
 }
 
 clone_zkevm-circuits() {
-  git clone -q https://github.com/taikoxyz/zkevm-circuits.git
+  git clone -q https://github.com/krzysztofpaliga/zkevm-circuits.git
   cd zkevm-circuits || exit 1
   echo "Cloned zkevm-circuits"
 }

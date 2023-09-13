@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eo pipefail
+#set -eo pipefail
 
 cd "$(dirname "$0")" || exit 1
 
@@ -35,7 +35,7 @@ run_single_benchmark() {
   ./08_processResults.sh "$CIRCUIT" "$DEGREE"
 }
 
-words="exp evm tx bytecode state pi copy super keccak"
+words="pi exp evm tx bytecode state pi copy super keccak"
 
 for word in $words; do
   case "$word" in
