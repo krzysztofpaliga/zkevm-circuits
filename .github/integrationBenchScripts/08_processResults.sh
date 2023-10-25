@@ -56,7 +56,7 @@ sudo cp *proverlog /var/www/www_logs/
 proverlog="http://43.130.90.57/www_logs/"$(ls -t /var/www/www_logs | head -1)
 sed -i '1i BENCH-PROVER;-1;UTC;LINUX-RESTART	(64 CPU)' mem.stats
 sed -i '1i BENCH-PROVER;-1;UTC;LINUX-RESTART	(64 CPU)' cpu.stats
-python3 reporting_main.py  "$proverlog" "1" "$circuit" "$degree" "$test_id"
+python3 reporting_main.py  "$proverlog" "1" "$circuit" "$degree" "$test_id" "metricA" "metricB"
 
 ssh -i ~/.ssh/bench.pem -o StrictHostKeyChecking=no ubuntu@"$PROVER_IP" "bash -s" <<EOF
 sudo rm -rf $prover_results_dir
